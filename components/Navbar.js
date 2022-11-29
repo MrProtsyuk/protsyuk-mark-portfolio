@@ -5,7 +5,7 @@ export default function NavBar() {
     <div className="flex justify-between items-center fixed w-full left-0 top-0 z-50 ease-in duration-300">
       <div>
         <p className="border rounded-sm m-4 p-4 hover:text-white hover:bg-slate-600 text-4xl">
-          Mark Protsyuk
+          LOGO
         </p>
       </div>
       <ul className="flex flex-row gap-4 m-4">
