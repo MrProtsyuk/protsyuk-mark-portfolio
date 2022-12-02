@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 * {
-  font-family: "Comfortaa", Courier, monospace;
+  font-family: "DM Serif Display";
+}
+
+.custom-img {
+  background-image: url("./images/hero.jpeg");
 }

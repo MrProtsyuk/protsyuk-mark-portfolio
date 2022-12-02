@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <About id="#about" />
     </div>
   );
 }
