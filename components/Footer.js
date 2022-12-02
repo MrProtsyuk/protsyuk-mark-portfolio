@@ -7,7 +7,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-2">
+    <div className="bg-gradient-to-r from-gray-800 to-gray-900">
       <div className="flex flex-col justify-center items-center text-white w-full">
         <Link href="/" className="p-2 mt-2 text-4xl">
           Mark Protsyuk

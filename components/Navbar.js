@@ -45,7 +45,7 @@ export default function NavBar() {
             <Link href="/">Home</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/about">About Me</Link>
+            <Link href="#about">About Me</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link href="/work">Projects</Link>
@@ -83,7 +83,7 @@ export default function NavBar() {
               <Link href="/">Home</Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="/about">About Me</Link>
+              <Link href="#about">About Me</Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
               <Link href="/work">My Work</Link>
