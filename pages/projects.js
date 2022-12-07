@@ -54,7 +54,10 @@ export default function Projects() {
     <div className="flex justify-center items-center bg-gray-500">
       <div className="flex flex-wrap mt-20 mb-10 justify-center items-center">
         {projectList.map((project, index) => (
-          <div className="flex flex-wrap justify-center items-center m-4 p-4 w-96 bg-white border rounded-lg hover:drop-shadow-xl">
+          <div
+            key={project.name}
+            className="flex flex-wrap justify-center items-center m-4 p-4 w-96 bg-white border rounded-lg hover:drop-shadow-xl"
+          >
             <Image src={project.image} width={300} height={200} />
             <div className="flex flex-col">
               <p className="text-lg">{project.name}</p>
