@@ -4,6 +4,7 @@
 
 * {
   font-family: "DM Serif Display";
+  scroll-behavior: smooth;
 }
 
 .custom-img {

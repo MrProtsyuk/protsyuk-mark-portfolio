@@ -13,7 +13,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const changeColor = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 50) {
         setColor("#ffffff");
         setTextColor("#000000");
       } else {
@@ -29,33 +29,39 @@ export default function NavBar() {
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full left-0 top-0 z-50 ease-in duration-300"
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center text-white">
+      <div className="max-w-[1240px] m-auto flex justify-between items-center">
         <Link
           style={{ color: `${textColor}` }}
-          className="border rounded-sm m-4 p-4 text-xl md:text-4xl hover:text-black hover:bg-gray-200"
+          className="border rounded-sm m-4 p-4 text-2xl lg:text-4xl text-white hover:text-black hover:bg-gray-200"
           href="/"
         >
           Mark Protsyuk
         </Link>
         <ul
           style={{ color: `${textColor}` }}
-          className="hidden sm:flex gap-4 m-4"
+          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl"
         >
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link href="/">Home</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="#about">About Me</Link>
+            <Link href="/#about">About Me</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/work">Projects</Link>
+            <Link href="/projects">Projects</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/contact">Resume</Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://docs.google.com/document/d/e/2PACX-1vTFlRXfRCrGhXAn14GfbD87Lh9eLAoEBJOZNfQw8_fvIFuqPwCbRnD8vDwmUDRO6u_YsBTRkIZIVw08/pub"
+            >
+              Resume
+            </Link>
           </li>
         </ul>
 
-        <div className="block sm:hidden z-10">
+        <div className="block sm:hidden z-10 m-4">
           {nav ? (
             <AiOutlineClose
               size={40}
@@ -80,16 +86,29 @@ export default function NavBar() {
         >
           <ul className="flex flex-col gap-4 m-4">
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={() => setNav(false)}>
+                Home
+              </Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="#about">About Me</Link>
+              <Link href="#about" onClick={() => setNav(false)}>
+                About Me
+              </Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="/work">My Work</Link>
+              <Link href="/projects" onClick={() => setNav(false)}>
+                Projects
+              </Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="/contact">Contact</Link>
+              <Link
+                onClick={() => setNav(false)}
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://docs.google.com/document/d/e/2PACX-1vTFlRXfRCrGhXAn14GfbD87Lh9eLAoEBJOZNfQw8_fvIFuqPwCbRnD8vDwmUDRO6u_YsBTRkIZIVw08/pub"
+              >
+                Resume
+              </Link>
             </li>
           </ul>
         </div>
