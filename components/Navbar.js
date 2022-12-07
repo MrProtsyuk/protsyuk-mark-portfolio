@@ -49,7 +49,7 @@ export default function NavBar() {
             <Link href="/#about">About Me</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects/">Projects</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link
