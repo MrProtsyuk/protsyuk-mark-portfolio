@@ -4,18 +4,16 @@ export default function About() {
   return (
     <div
       id="about"
-      className="flex flex-col justify-center items-center bg-slate-100"
+      className="flex flex-col justify-center items-center bg-slate-100 w-auto"
     >
       <div className="flex flex-wrap justify-center items-center">
-        <div>
-          <Image
-            src="/images/coverpic.jpeg"
-            width={400}
-            height={200}
-            className="w-96 border rounded-lg border-transparent m-8 drop-shadow-sm drop-shadow-2xl"
-          />
-        </div>
-        <div className="flex flex-col gap-2 w-96 m-10 border bg-white border-slate-500 rounded-md drop-shadow-sm drop-shadow-2xl">
+        <Image
+          src="/images/coverpic.jpeg"
+          width={400}
+          height={200}
+          className="w-72 sm:w-96 border rounded-lg border-transparent m-8 drop-shadow-2xl"
+        />
+        <div className="flex flex-col w-72 sm:w-96 border bg-white border-slate-500 rounded-md drop-shadow-2xl">
           <p className="p-4 text-lg">
             Hello! My name is Mark Protsyuk and I am a Software Engineer from
             Sacramento, CA! I am a recent UC Davis Bootcamp graduate. I have had
@@ -54,7 +52,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 border rounded-md border-slate-500 p-2 m-4 mb-8 bg-white w-96 md:w-auto drop-shadow-2xl">
+      <div className="flex flex-col justify-center items-center gap-4 border rounded-md border-slate-500 p-0 m-0 sm:p-2 sm:m-4 mb-8 bg-white w-72 sm:w-96 md:w-auto drop-shadow-2xl">
         <p className="text-xl">My Skills and Certification</p>
         <div className="flex flex-wrap justify-center items-center gap-4">
           <Image
