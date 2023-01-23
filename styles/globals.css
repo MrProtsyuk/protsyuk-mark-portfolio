@@ -3,10 +3,24 @@
 @tailwind utilities;
 
 * {
-  font-family: "DM Serif Display";
+  font-family: "Lexend", sans-serif;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 .custom-img {
   background-image: url("../public/images/hero.jpeg");
+}
+
+.hide {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
 }

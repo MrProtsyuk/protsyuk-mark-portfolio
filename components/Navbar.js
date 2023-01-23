@@ -32,7 +32,7 @@ export default function NavBar() {
       <div className="max-w-[1240px] m-auto flex justify-between items-center">
         <div className="flex" style={{ color: `${textColor}` }}>
           <Link
-            className="border rounded-sm m-4 p-4 text-2xl lg:text-4xl hover:text-black hover:bg-gray-200"
+            className="border rounded-sm m-4 p-4 text-xl lg:text-4xl hover:text-black hover:bg-gray-200"
             href="/"
           >
             Mark Protsyuk
@@ -40,25 +40,21 @@ export default function NavBar() {
         </div>
         <ul
           style={{ color: `${textColor}` }}
-          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl"
+          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl scroll-smooth"
         >
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link href="/">Home</Link>
           </li>
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/#about">About Me</Link>
-          </li>
-          <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link href="/projects/">Projects</Link>
-          </li>
-          <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://docs.google.com/document/d/e/2PACX-1vTFlRXfRCrGhXAn14GfbD87Lh9eLAoEBJOZNfQw8_fvIFuqPwCbRnD8vDwmUDRO6u_YsBTRkIZIVw08/pub"
-            >
-              Resume
+            <Link className="scroll-smooth" href="/#about">
+              About Me
             </Link>
+          </li>
+          <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
+            <Link href="/#projects">Projects</Link>
+          </li>
+          <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
+            <Link href="/#contact">Contact</Link>
           </li>
         </ul>
 
@@ -97,19 +93,12 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link href="/projects" onClick={() => setNav(false)}>
+              <Link href="/#projects" onClick={() => setNav(false)}>
                 Projects
               </Link>
             </li>
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
-              <Link
-                onClick={() => setNav(false)}
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://docs.google.com/document/d/e/2PACX-1vTFlRXfRCrGhXAn14GfbD87Lh9eLAoEBJOZNfQw8_fvIFuqPwCbRnD8vDwmUDRO6u_YsBTRkIZIVw08/pub"
-              >
-                Resume
-              </Link>
+              <Link href="/#contact">Contact</Link>
             </li>
           </ul>
         </div>

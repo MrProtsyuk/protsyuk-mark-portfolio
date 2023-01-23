@@ -4,24 +4,25 @@ export default function About() {
   return (
     <div
       id="about"
-      className="flex flex-col justify-center items-center bg-slate-100 w-auto"
+      className="flex flex-col pt-10 justify-center items-center bg-gradient-to-r from-sky-900 to-gray-900"
     >
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="text-white text-4xl md:text-5xl mt-6">About Myself</div>
+      <div className="flex flex-wrap justify-center items-center pb-10">
         <Image
           src="/images/coverpic.jpeg"
           width={400}
           height={200}
-          className="w-72 sm:w-96 border rounded-lg border-transparent m-8 drop-shadow-2xl"
+          className="w-72 sm:w-80 border rounded-lg border-transparent m-8 drop-shadow-2xl"
         />
-        <div className="flex flex-col w-72 sm:w-96 border bg-white border-slate-500 rounded-md drop-shadow-2xl">
-          <p className="p-4 text-lg">
+        <div className="flex flex-col w-72 sm:w-6/12 h-auto border bg-gradient-to-r from-white to-blue-100 border-slate-500 rounded-md drop-shadow-2xl p-5 my-5">
+          <p className="p-4 text-sm sm:text-lg">
             Hello! My name is Mark Protsyuk and I am a Software Engineer from
             Sacramento, CA! I am a recent UC Davis Bootcamp graduate. I have had
             some local intern experience and now I am excited to work in a
             professional enviornment. You can view some of the projects I have
             worked on below.
           </p>
-          <p className="p-4 text-lg">
+          <p className="p-4 text-sm sm:text-lg">
             Some activities that I like to do in my free time are snowboarding,
             playing music, and climbing. These activities really help me to push
             myself into trying new things regardless of the difficulty I may
@@ -52,62 +53,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-4 border rounded-md border-slate-500 p-0 m-0 sm:p-2 sm:m-4 mb-8 bg-white w-72 sm:w-96 md:w-auto drop-shadow-2xl">
-        <p className="text-xl">My Skills and Certification</p>
-        <div className="flex flex-wrap justify-center items-center gap-4">
-          <Image
-            width={400}
-            height={400}
-            alt="Davis certification"
-            src="/images/daviscertification.png"
-            className="p-2 drop-shadow-lg"
-          />
-          <div className="flex grid grid-cols-3 gap-4 justify-center items-center p-2 ml-6 m-6">
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/js.png"
-              className="p-2 drop-shadow-lg"
-            />
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/nodejs.png"
-              className="p-2 drop-shadow-lg"
-            />
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/react.png"
-              className="p-2 drop-shadow-lg"
-            />
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/mongodb.png"
-              className="p-2 drop-shadow-lg"
-            />
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/express.png"
-              className="p-2 drop-shadow-lg"
-            />
-            <Image
-              width={100}
-              height={1}
-              alt="Davis certification"
-              src="/images/tailwind.png"
-              className="p-2 drop-shadow-lg"
-            />
-          </div>
-        </div>
-      </div>
+      <span className="border border-gray-400 w-6/12"></span>
     </div>
   );
 }
