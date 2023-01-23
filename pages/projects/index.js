@@ -64,9 +64,9 @@ export default function Projects() {
         Some Of My Projects
       </div>
       <div className="flex text-sky-900 bg-white rounded-lg text-sm sm:text-lg text-center p-2 m-1 mx-5">
-        Although I've worked on a number of different projects, especially in
-        the BootCamp. These are some of the more recent ones that I'd like to
-        share.
+        Although I have worked on a number of different projects, especially in
+        the BootCamp. These are some of the more recent ones that I would like
+        to share.
       </div>
       <div className="flex flex-wrap justify-center items-center pb-10">
         {projectList.map((project, index) => (

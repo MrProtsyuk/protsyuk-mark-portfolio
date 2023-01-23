@@ -10,6 +10,7 @@ export default function About() {
       <div className="flex flex-wrap justify-center items-center pb-10">
         <Image
           src="/images/coverpic.jpeg"
+          alt="cover image"
           width={400}
           height={200}
           className="w-72 sm:w-80 border rounded-lg border-transparent m-8 drop-shadow-2xl"
