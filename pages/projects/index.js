@@ -58,12 +58,12 @@ export default function Projects() {
     <div
       ref={projectRef}
       id="projects"
-      className="flex flex-col justify-center items-center bg-gradient-to-r from-green-900 to-sky-900 pt-10 min-h-screen"
+      className="flex flex-col justify-center items-center bg-gradient-to-t from-green-800 to-gray-500 pt-10 min-h-screen"
     >
       <div className="text-white text-3xl md:text-5xl mb-6 p-2">
         Some Of My Projects
       </div>
-      <div className="flex text-sky-900 bg-white rounded-lg text-sm sm:text-lg text-center p-2 m-1 mx-5">
+      <div className="flex text-green-900 bg-white rounded-lg text-sm sm:text-lg text-center p-2 m-1 mx-5">
         Although I have worked on a number of different projects, especially in
         the BootCamp. These are some of the more recent ones that I would like
         to share.
