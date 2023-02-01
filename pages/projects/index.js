@@ -58,7 +58,7 @@ export default function Projects() {
     <div
       ref={projectRef}
       id="projects"
-      className="flex flex-col justify-center items-center bg-gradient-to-r from-sky-900 to-gray-900 pt-10 min-h-screen"
+      className="flex flex-col justify-center items-center bg-gradient-to-r from-green-900 to-sky-900 pt-10 min-h-screen"
     >
       <div className="text-white text-3xl md:text-5xl mb-6 p-2">
         Some Of My Projects
@@ -97,7 +97,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <span className="border border-gray-400 w-6/12"></span>
     </div>
   );
 }

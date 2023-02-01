@@ -4,9 +4,11 @@ export default function About() {
   return (
     <div
       id="about"
-      className="flex flex-col pt-10 justify-center items-center bg-gradient-to-r from-sky-900 to-gray-900"
+      className="flex flex-col pt-10 justify-center items-center bg-gradient-to-r from-white to-gray-200"
     >
-      <div className="text-white text-4xl md:text-5xl mt-6">About Myself</div>
+      <div className="text-green-800 text-4xl md:text-5xl mt-6">
+        About Myself
+      </div>
       <div className="flex flex-wrap justify-center items-center pb-10">
         <Image
           src="/images/coverpic.jpeg"
@@ -15,7 +17,7 @@ export default function About() {
           height={200}
           className="w-72 sm:w-80 border rounded-lg border-transparent m-8 drop-shadow-2xl"
         />
-        <div className="flex flex-col w-72 sm:w-6/12 h-auto border bg-gradient-to-r from-white to-blue-100 border-slate-500 rounded-md drop-shadow-2xl p-5 my-5">
+        <div className="flex flex-col w-72 sm:w-6/12 h-auto border bg-gradient-to-r from-white to-gray-200 border-slate-500 rounded-md drop-shadow-2xl p-5 my-5">
           <p className="p-4 text-sm sm:text-lg">
             Hello! My name is Mark Protsyuk and I am a Software Engineer from
             Sacramento, CA! I am a recent UC Davis Bootcamp graduate. I have had
@@ -54,7 +56,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <span className="border border-gray-400 w-6/12"></span>
     </div>
   );
 }
