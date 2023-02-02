@@ -58,12 +58,12 @@ export default function Projects() {
     <div
       ref={projectRef}
       id="projects"
-      className="flex flex-col justify-center items-center bg-gradient-to-t from-green-800 to-gray-500 pt-10 min-h-screen"
+      className="flex flex-col justify-center items-center bg-gray-600 pt-10"
     >
-      <div className="text-white text-3xl md:text-5xl mb-6 p-2">
+      <div className="text-white text-4xl md:text-5xl 2xl:text-7xl mb-6 p-2">
         Some Of My Projects
       </div>
-      <div className="flex text-green-900 bg-white rounded-lg text-sm sm:text-lg text-center p-2 m-1 mx-5">
+      <div className="flex text-black bg-white rounded-lg text-sm sm:text-lg xl:text-xl text-center p-2 m-1 mx-5">
         Although I have worked on a number of different projects, especially in
         the BootCamp. These are some of the more recent ones that I would like
         to share.
@@ -72,24 +72,29 @@ export default function Projects() {
         {projectList.map((project, index) => (
           <div
             key={project.name}
-            className="flex flex-row items-center m-4 p-4 w-72 sm:w-96 bg-white border rounded-lg hover:drop-shadow-xl"
+            className="flex flex-row items-center m-4 p-4 w-72 sm:w-96 lg:w-4/12 bg-white border rounded-lg hover:drop-shadow-xl"
           >
-            <div>
-              <Image
-                src={project.image}
-                alt="Project image"
-                width={200}
-                height={200}
-                className="w-16 sm:w-16 h-16 sm:h-16 mr-2"
-              />
-            </div>
             <div className="flex flex-col">
-              <Link href={project.page} className="text-sm sm:text-lg m-1">
+              <div>
+                <Image
+                  src={project.image}
+                  alt="Project image"
+                  width={200}
+                  height={200}
+                  className="w-16 sm:w-16 h-16 sm:h-16 mr-2"
+                />
+              </div>
+              <Link
+                href={project.page}
+                className="text-sm sm:text-lg xl:text-2xl m-1"
+              >
                 {project.name}
               </Link>
-              <p className="text-sm text-slate-400 m-1">{project.status}</p>
-              <p className="text-sm m-1">{project.description}</p>
-              <p className="text-sm m-1">{project.skills}</p>
+              <p className="text-sm sm:text-lg text-slate-400 m-1">
+                {project.status}
+              </p>
+              <p className="text-sm sm:text-lg m-1">{project.description}</p>
+              <p className="text-sm sm:text-lg m-1">{project.skills}</p>
               <Link href="/" className="m-1">
                 <AiOutlineGithub className="text-2xl" />
               </Link>

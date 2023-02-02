@@ -7,9 +7,12 @@ import {
 
 export default function Footer() {
   return (
-    <div className="bg-gray-600">
+    <div className="bg-gradient-to-b from-gray-600 to-gray-900">
       <div className="flex flex-col justify-center items-center text-white w-full">
-        <Link href="/" className="p-2 mt-2 text-4xl">
+        <Link
+          href="/"
+          className="p-2 mt-2 text-4xl md:text-5xl 2xl:text-7xl hover:text-gray-500"
+        >
           Mark Protsyuk
         </Link>
         <div className="flex flex-row justify-center items-center gap-4">
@@ -38,7 +41,10 @@ export default function Footer() {
             <AiOutlineLinkedin size={40} />
           </Link>
         </div>
-        <Link href="/" className="text-slate-500 p-3">
+        <Link
+          href="/"
+          className="text-slate-500 p-3 text-lg md:text-xl 2xl:text-2xl hover:text-white"
+        >
           © Mark Protsyuk 2022
         </Link>
       </div>

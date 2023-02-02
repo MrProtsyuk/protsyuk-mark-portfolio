@@ -29,10 +29,10 @@ export default function NavBar() {
       style={{ backgroundColor: `${color}` }}
       className="fixed w-full left-0 top-0 z-50 ease-in duration-300"
     >
-      <div className="max-w-[1240px] m-auto flex justify-between items-center">
+      <div className="max-w-[1536px] m-auto flex justify-between items-center">
         <div className="flex" style={{ color: `${textColor}` }}>
           <Link
-            className="border rounded-sm m-4 p-4 text-xl lg:text-4xl hover:text-black hover:bg-gray-200"
+            className="border rounded-sm m-4 p-4 text-xl lg:text-4xl 2xl:text-5xl hover:text-black hover:bg-gray-200"
             href="/"
           >
             Mark Protsyuk
@@ -40,7 +40,7 @@ export default function NavBar() {
         </div>
         <ul
           style={{ color: `${textColor}` }}
-          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl scroll-smooth"
+          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl 2xl:text-5xl scroll-smooth"
         >
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link href="/">Home</Link>
