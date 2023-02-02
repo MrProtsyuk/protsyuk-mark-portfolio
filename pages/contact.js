@@ -8,7 +8,7 @@ export default function Contact() {
       ref={contactRef}
       className="flex flex-col justify-center items-center bg-gradient-to-r from-white to-gray-200"
     >
-      <p className="text-green-800 text-4xl md:text-5xl 2xl:text-7xl my-4">
+      <p className="text-green-800 text-4xl md:text-5xl 2xl:text-7xl my-4 text-center">
         Certification and Contact
       </p>
       <div className="flex flex-wrap justify-center items-center">

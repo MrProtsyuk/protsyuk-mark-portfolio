@@ -60,7 +60,7 @@ export default function Projects() {
       id="projects"
       className="flex flex-col justify-center items-center bg-gray-600 pt-10"
     >
-      <div className="text-white text-4xl md:text-5xl 2xl:text-7xl mb-6 p-2">
+      <div className="text-white text-4xl md:text-5xl 2xl:text-7xl mb-6 p-2 text-center">
         Some Of My Projects
       </div>
       <div className="flex text-black bg-white rounded-lg text-sm sm:text-lg xl:text-xl text-center p-2 m-1 mx-5">
