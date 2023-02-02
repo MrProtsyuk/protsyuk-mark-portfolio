@@ -1,15 +1,15 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+require("dotenv").config();
+const sgMail = require("@sendgrid/mail");
 
-import mail from "@sendgrid/mail";
+sgMail.setApiKey(process.env.SG_MAIL_KEY);
 
-mail.setApiKey(process.env.SG_MAIL_KEY);
-
-export default (req, res) => {
-  const body = JSON.parse(req.body);
+export default async function handler(req, res) {
+  const { name, email, message } = req.body;
 
   const data = {
     to: "protsyukmark@gmail.com",
-    from: `${body.email}`,
+    from: email,
     subject: "Reaching out because I saw your Portfolio",
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html lang="en">
@@ -29,15 +29,15 @@ export default (req, res) => {
             </div>
             <div class="flex flex-col place-content-center">
               <div class="flex flex-row place-content-center">
-                <h2 class="text-2xl text-blue-700">Hey this is, ${body.name}!</h2>
+                <h2 class="text-2xl text-blue-700">Hey this is, ${name}!</h2>
               </div>
               <div class="border border-solid rounded-lg border-slate-400">
-              <p class="text-xl text-blue-700">${body.message}</p>
+              <p class="text-xl text-blue-700">${message}</p>
               </div>
             </div>
     </body>
     </html>`,
   };
-  mail.send(data);
+  await sgMail.send(data);
   res.status(200).json({ status: "ok" });
-};
+}
