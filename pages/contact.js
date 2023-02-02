@@ -1,13 +1,32 @@
 import Image from "next/image";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 
 export default function Contact() {
-  const { ref: contactRef, inView: contactIsVisible } = useInView();
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const { name, email, message } = values;
+  const handleChange = (e) =>
+    setValues({ ...values, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
-    <div
-      ref={contactRef}
-      className="flex flex-col justify-center items-center bg-gradient-to-r from-white to-gray-200"
-    >
+    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-white to-gray-200">
       <p className="text-green-800 text-4xl md:text-5xl 2xl:text-7xl my-4 text-center">
         Certification and Contact
       </p>
@@ -65,25 +84,38 @@ export default function Contact() {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-4 border rounded-md border-slate-500 p-2 m-2 sm:p-4 sm:m-4 mb-8 bg-gradient-to-r from-white to-gray-300 w-72 sm:w-7/12 h-5/6 drop-shadow-2xl">
-          <p className="text-xl mt-2">Contact Me</p>
-          <input
-            placeholder="Your Email"
-            className="p-2 w-60 lg:w-96 border rounded-md border-slate-500"
-          ></input>
-          <input
-            placeholder="Your Name"
-            className="p-2 w-60 lg:w-96 border rounded-md border-slate-500"
-          ></input>
-          <textarea
-            placeholder="Add a message!"
-            className="p-2 w-60 lg:w-96 h-40 border rounded-md border-slate-500"
-          ></textarea>
-          <button className="p-2 mb-2 w-24 border rounded-md border-slate-500 text-white bg-gray-800 hover:bg-gray-500">
-            Submit
-          </button>
-        </div>
       </div>
+      <form
+        method="post"
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center gap-4 border rounded-md border-slate-500 p-2 m-2 sm:p-4 sm:m-4 mb-8 bg-gradient-to-r from-white to-gray-300 w-72 sm:w-7/12 h-5/6 drop-shadow-2xl"
+      >
+        <p className="text-xl mt-2">Contact Me</p>
+        <input
+          placeholder="Your Email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+          className="p-2 w-60 lg:w-96 border rounded-md border-slate-500"
+        ></input>
+        <input
+          placeholder="Your Name"
+          name="name"
+          value={name}
+          onChange={handleChange}
+          className="p-2 w-60 lg:w-96 border rounded-md border-slate-500"
+        ></input>
+        <textarea
+          placeholder="Add a message!"
+          name="message"
+          value={message}
+          onChange={handleChange}
+          className="p-2 w-60 lg:w-96 h-40 border rounded-md border-slate-500"
+        ></textarea>
+        <button className="p-2 mb-2 w-24 border rounded-md border-slate-500 text-white bg-gray-800 hover:bg-gray-500">
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
