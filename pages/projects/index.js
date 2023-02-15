@@ -33,12 +33,12 @@ const projectList = [
   },
   {
     image: "/images/bot.png",
-    name: "Tuesday, Chat GPT",
-    status: "*In Development",
+    name: "Chaty AI",
+    status: "",
     description: "Chat GPT made from home!",
     skills: "ReactJS, NodeJS, API",
-    page: "",
-    github: "",
+    page: "https://chaty-ai.vercel.app/",
+    github: "https://github.com/MrProtsyuk/Chaty-AI",
   },
   {
     image: "/images/chart.png",
