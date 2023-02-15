@@ -15,7 +15,7 @@ export default function Hero() {
           <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://docs.google.com/document/d/e/2PACX-1vQRpe9uLnvE0T89_0LRWu_v8WtPqNrOULW8LiUPCvfzT9hGpFEj8-HBpiDZvaJ1YRaBg4Q0_z5GeMDV/pub"
+            href="https://docs.google.com/document/d/e/2PACX-1vTFlRXfRCrGhXAn14GfbD87Lh9eLAoEBJOZNfQw8_fvIFuqPwCbRnD8vDwmUDRO6u_YsBTRkIZIVw08/pub"
           >
             Resume
           </Link>

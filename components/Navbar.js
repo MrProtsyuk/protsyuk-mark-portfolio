@@ -40,7 +40,7 @@ export default function NavBar() {
         </div>
         <ul
           style={{ color: `${textColor}` }}
-          className="hidden sm:flex gap-4 m-4 text-sm lg:text-xl 2xl:text-5xl scroll-smooth"
+          className="hidden sm:visible sm:flex gap-4 m-2 text-sm lg:text-xl 2xl:text-5xl scroll-smooth"
         >
           <li className="border rounded-sm p-4 hover:text-black hover:bg-gray-200">
             <Link href="/">Home</Link>
@@ -58,7 +58,7 @@ export default function NavBar() {
           </li>
         </ul>
 
-        <div className="block sm:hidden z-10 m-4">
+        <div className="block z-10 m-4">
           {nav ? (
             <AiOutlineClose
               size={40}
@@ -77,11 +77,11 @@ export default function NavBar() {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black/80 text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-center ease-in duration-300"
+              ? "absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black/50 text-center ease-in duration-300"
+              : "absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black/70 text-center ease-in duration-300"
           }
         >
-          <ul className="flex flex-col gap-4 m-4">
+          <ul className="flex flex-col sm:flex-row gap-4 m-4">
             <li className="border rounded-sm p-4 bg-white text-black hover:text-slate-400">
               <Link href="/" onClick={() => setNav(false)}>
                 Home
